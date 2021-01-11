@@ -14,3 +14,8 @@ chown -R root:root /etc/mysql/conf.d
 
 systemctl restart mariadb
 
+mkdir -p /opt/tools
+echo 'PATH=$PATH:/opt/tools' >> /etc/profile
+wget -P /opt/tools https://www.percona.com/get/pt-duplicate-key-checker
+chmod -R u+x /opt/tools
+
