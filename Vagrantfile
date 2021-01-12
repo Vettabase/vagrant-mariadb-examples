@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
 
     # provision with the vagrant.yml Ansible playbook
     #config.vm.provision "ansible" do |ansible|
-    #    ansible.playbook = "vagrant.yml"
+    #    ansible.playbook = "mariadb.yml"
     #end
 end
 

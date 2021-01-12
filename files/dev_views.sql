@@ -4,12 +4,12 @@
 #   - https://vettabase.com/blog/understanding-tables-usage-with-user-statistics-percona-server-mariadb/
 
 
-CREATE SCHEMA _;
+CREATE SCHEMA IF NOT EXISTS _;
 USE _;
 
 
 -- Queries that always return an error
-CREATE VIEW sql_failed AS
+CREATE OR REPLACE VIEW sql_failed AS
     SELECT
             DIGEST_TEXT,
             COUNT_STAR,
@@ -25,7 +25,7 @@ CREATE VIEW sql_failed AS
 \G
 
 # Queries that always return/affect 0 rows
-CREATE VIEW sql_no_rows AS
+CREATE OR REPLACE VIEW sql_no_rows AS
     SELECT *
         FROM performance_schema.events_statements_summary_by_digest
         WHERE
@@ -44,7 +44,7 @@ CREATE VIEW sql_no_rows AS
 \G
 
 # Unused indexes
-CREATE VIEW index_unused AS
+CREATE OR REPLACE VIEW index_unused AS
     SELECT st.TABLE_SCHEMA, st.TABLE_NAME, st.INDEX_NAME
         FROM information_schema.STATISTICS st
         LEFT JOIN information_schema.INDEX_STATISTICS idx
@@ -59,7 +59,7 @@ CREATE VIEW index_unused AS
 \G
 
 # Unused tables
-CREATE VIEW tables_unused AS
+CREATE OR REPLACE VIEW tables_unused AS
     SELECT
             t.TABLE_SCHEMA, t.TABLE_NAME, t.ENGINE
         FROM information_schema.TABLES t

@@ -1,0 +1,64 @@
+---
+
+- hosts: all
+  become: yes
+  tasks: 
+
+  - name: Install basic packages
+    apt:
+      name: [ software-properties-common, dirmngr, apt-transport-https ]
+      state: present
+
+  - name: Add MariaDB signing key
+    apt_key:
+      id: C0F47944DE8F6914
+      url: https://mariadb.org/mariadb_release_signing_key.asc
+      state: present
+
+  - name: Add MariaDB official repository
+    apt_repository:
+      repo: deb [arch=amd64,arm64,ppc64el] https://mirrors.ukfast.co.uk/sites/mariadb/repo/10.5/ubuntu bionic main
+      filename: mariadb
+      state: present
+
+  - name: Install MariaDB
+    apt:
+      name: [ mariadb-server, mariadb-client ]
+      state: present
+
+  - name: Upload my.cnf
+    copy:
+      src: ./files/my.cnf
+      dest: /etc/mysql/conf.d/
+
+  - name: Restart MariaDB service
+    service:
+      name: mariadb
+      state: restarted
+
+  - name: Create /opt/tools
+    file:
+      path: /opt/tools
+      owner: root
+      group: root
+      mode: '700'
+      state: directory
+
+  - name: Add /opt/tools to $PATH
+    lineinfile:
+      path: /etc/profile
+      line: PATH=$PATH:/opt/tools
+      state: present
+
+  - name: Download pt-duplicate-key-checker
+    get_url:
+      url: https://www.percona.com/get/pt-duplicate-key-checker
+      dest: /opt/tools
+      owner: root
+      group: root
+      mode: '700'
+
+  - name: Create info views
+    shell: >
+      mariadb < /Vagrant/files/dev_views.sql
+
