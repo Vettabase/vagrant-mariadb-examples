@@ -27,7 +27,12 @@ vagrant up --provision
 ```
 
 
-## Copyright
+## Copyright and Contacts
 
 This repository is distributed under the terms of the GNU GPL, version 3. Copyright: Vettabase Ltd.
+
+To contact us:
+
+* info@vettabase.com
+* https://vettabase.com
 
