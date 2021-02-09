@@ -2,6 +2,13 @@
 
 This repository was created to host a working example for Federico Razzoli's talk at FOSDEM 21: "Creating Vagrant development machines for MariaDB - HowTo and Best Practices".
 
+This repository contains the necessary code to create a Vagrant box with MariaDB, using VirtualBox as a provider and Bash or Ansible as provisioners. Feel free to file a feature request to see an example involving a particular provider or provisioner.
+
+
+## More info
+
+The original talk's page on FOSDEM website:
+
 https://fosdem.org/2021/schedule/event/mariadb_vagrant/
 
 More info about using Vagrant for MariaDB can be found in the MariaDB KnowledgeBase:
