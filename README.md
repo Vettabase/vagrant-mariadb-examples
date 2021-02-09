@@ -4,6 +4,18 @@ This repository was created to host a working example for Federico Razzoli's tal
 
 https://fosdem.org/2021/schedule/event/mariadb_vagrant/
 
+More info about using Vagrant for MariaDB can be found in the MariaDB KnowledgeBase:
+
+https://mariadb.com/kb/en/vagrant-and-mariadb/
+
+The talk recording is available on the YouTube MariaDB Foundation channel:
+
+https://github.com/Vettabase/vagrant-mariadb-examples
+
+MariaDB KnowledgeBase has a section (initially contributed by Vettabase) with some documentation of using MariaDB on Vagrant, and a Vagrant overview for MariaDB users:
+
+https://mariadb.com/kb/en/vagrant-and-mariadb/
+
 
 ## Usage
 
