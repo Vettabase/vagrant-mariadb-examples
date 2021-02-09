@@ -10,7 +10,7 @@ https://mariadb.com/kb/en/vagrant-and-mariadb/
 
 The talk recording is available on the YouTube MariaDB Foundation channel:
 
-https://github.com/Vettabase/vagrant-mariadb-examples
+https://www.youtube.com/watch?v=H7jhFFE2Sfs&list=PLaWL8LA11YjFuh_58T-U4T_9VXRVpQJWA&index=7&ab_channel=MariaDBFoundation
 
 MariaDB KnowledgeBase has a section (initially contributed by Vettabase) with some documentation of using MariaDB on Vagrant, and a Vagrant overview for MariaDB users:
 
