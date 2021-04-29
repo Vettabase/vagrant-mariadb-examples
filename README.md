@@ -19,6 +19,10 @@ The talk recording is available on the YouTube MariaDB Foundation channel:
 
 https://www.youtube.com/watch?v=H7jhFFE2Sfs&list=PLaWL8LA11YjFuh_58T-U4T_9VXRVpQJWA&index=7&ab_channel=MariaDBFoundation
 
+The slides are here:
+
+https://www.slideshare.net/FedericoRazzoli/creating-vagrant-development-machines-with-mariadb
+
 MariaDB KnowledgeBase has a section (initially contributed by Vettabase) with some documentation of using MariaDB on Vagrant, and a Vagrant overview for MariaDB users:
 
 https://mariadb.com/kb/en/vagrant-and-mariadb/
