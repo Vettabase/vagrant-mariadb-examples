@@ -11,7 +11,7 @@ The original talk's page on FOSDEM website:
 
 https://fosdem.org/2021/schedule/event/mariadb_vagrant/
 
-More info about using Vagrant for MariaDB can be found in the MariaDB KnowledgeBase:
+MariaDB KnowledgeBase has a section (initially contributed by Vettabase) with some documentation of using MariaDB on Vagrant, and a Vagrant overview for MariaDB users:
 
 https://mariadb.com/kb/en/vagrant-and-mariadb/
 
@@ -22,10 +22,6 @@ https://www.youtube.com/watch?v=H7jhFFE2Sfs&list=PLaWL8LA11YjFuh_58T-U4T_9VXRVpQ
 The slides are here:
 
 https://www.slideshare.net/FedericoRazzoli/creating-vagrant-development-machines-with-mariadb
-
-MariaDB KnowledgeBase has a section (initially contributed by Vettabase) with some documentation of using MariaDB on Vagrant, and a Vagrant overview for MariaDB users:
-
-https://mariadb.com/kb/en/vagrant-and-mariadb/
 
 
 ## Usage
