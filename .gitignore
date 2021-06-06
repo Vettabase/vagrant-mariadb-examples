@@ -1,3 +1,4 @@
+# exclude all Vagrant-related files
 .vagrant
 *.log
 *.box
