@@ -36,6 +36,7 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--cpuhotplug", "on"]
         vb.customize ["modifyvm", :id, "--cpus", "2"]
         vb.customize ["modifyvm", :id, "--vram", "8"]
+        vb.customize ['modifyvm', :id, '--clipboard', "bidirectional"]
     end
 
     config.vm.provider "vmware_fusion"
